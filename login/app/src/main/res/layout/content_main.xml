@@ -43,7 +43,8 @@
             android:layout_below="@+id/txtemail"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:hint="Ingrese contraseña" />
+            android:hint="Ingrese contraseña"
+            android:autoText="false" />
 </android.support.design.widget.TextInputLayout>
 
 
@@ -54,95 +55,16 @@
         android:id="@+id/txtboton"
         android:nestedScrollingEnabled="false"
         android:layout_below="@+id/til_pass"
-        android:layout_alignRight="@+id/btnregistro"
-        android:layout_alignEnd="@+id/btnregistro"
-        android:layout_marginTop="43dp" />
+        android:layout_marginTop="43dp"
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registrate"
-        android:id="@+id/btnregistro"
-        android:elegantTextHeight="false"
-        android:layout_below="@+id/textpass2"
+        android:id="@+id/textregistro"
+        android:layout_below="@+id/txtboton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp" />
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/til_nombres"
-        android:layout_below="@+id/txtboton"
-        android:layout_toLeftOf="@+id/btnregistro"
-        android:layout_toStartOf="@+id/btnregistro">
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/textnom1"
-        android:layout_below="@+id/txtboton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="45dp"
-        android:layout_toLeftOf="@+id/btnregistro"
-        android:layout_toStartOf="@+id/btnregistro"
-        android:hint="Nombres"
-        android:singleLine="true" />
-</android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/til_apellido"
-        android:layout_below="@+id/txtboton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/txtboton"
-        android:layout_toEndOf="@+id/txtboton">
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/textapell"
-        android:layout_alignTop="@+id/textnom1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/txtboton"
-        android:layout_toEndOf="@+id/txtboton"
-        android:hint="Apellidos" />
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/til_pass1"
-        android:layout_below="@+id/til_nombres"></android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/til_pass2"
-        android:layout_below="@+id/til_pass1"></android.support.design.widget.TextInputLayout>
+        android:layout_marginTop="84dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/textpass2"
-        android:hint="Repetir contraseña"
-        android:layout_below="@+id/til_pass2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="53dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/textpass1"
-        android:hint="Ingrese contraseña"
-        android:contextClickable="false"
-        android:layout_below="@+id/til_pass2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 </RelativeLayout>
