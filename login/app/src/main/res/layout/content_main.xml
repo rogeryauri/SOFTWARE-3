@@ -24,12 +24,12 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/txtemail"
+            android:id="@+id/txtuser"
             android:layout_below="@+id/textView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:hint="Ingrese E-mail"
-            android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+            android:hint="Ingrese usuario"
+            android:textColor="@color/abc_secondary_text_material_dark" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -45,11 +45,12 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/txtpass"
-            android:layout_below="@+id/txtemail"
+            android:layout_below="@+id/txtuser"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:hint="Ingrese contraseña"
-            android:autoText="false" />
+            android:autoText="false"
+            android:textColor="@color/background_floating_material_light" />
 </android.support.design.widget.TextInputLayout>
 
 
@@ -63,7 +64,7 @@
         android:layout_marginTop="43dp"
         android:layout_centerHorizontal="true"
         android:background="@android:drawable/ic_notification_overlay"
-        android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+        android:textColor="@color/abc_primary_text_disable_only_material_dark" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,7 +72,7 @@
         android:text=">>Registrate&lt;&lt;"
         android:id="@+id/textregistro"
         android:textSize="@dimen/abc_action_bar_content_inset_material"
-        android:textColor="@color/abc_background_cache_hint_selector_material_light"
+        android:textColor="@color/abc_primary_text_material_dark"
         android:background="@drawable/abc_textfield_search_default_mtrl_alpha"
         android:layout_below="@+id/txtboton"
         android:layout_centerHorizontal="true" />

@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yack.holamundo">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -25,6 +24,10 @@
         <activity
             android:name=".registro"
             android:label="@string/title_activity_registro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lugar_1"
+            android:label="@string/title_activity_lugar_1"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
