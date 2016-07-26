@@ -28,6 +28,10 @@
         <activity
             android:name=".lugar_1"
             android:label="@string/title_activity_lugar_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Principales_lugares"
+            android:label="@string/title_activity_principales_lugares"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

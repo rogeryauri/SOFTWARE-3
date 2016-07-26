@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_registro">registro</string>
     <string name="title_activity_lugar_1">lugar_1</string>
+    <string name="title_activity_principales_lugares">Principales_lugares</string>
 </resources>
