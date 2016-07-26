@@ -32,6 +32,10 @@
         <activity
             android:name=".Principales_lugares"
             android:label="@string/title_activity_principales_lugares"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ponceca_catalogo"
+            android:label="@string/title_activity_ponceca_catalogo"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
