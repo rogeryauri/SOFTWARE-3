@@ -76,25 +76,6 @@ public class registro extends AppCompatActivity {
 
         }
     }
-
-    private class ConsultarDatos extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... urls) {
-
-            // params comes from the execute() call: params[0] is the url.
-            try {
-                return downloadUrl(urls[0]);
-            } catch (IOException e) {
-                return "Unable to retrieve web page. URL may be invalid.";
-            }
-        }
-        // onPostExecute displays the results of the AsyncTask.
-        @Override
-        protected void onPostExecute(String result) {
-
-                   }
-    }
-
     private String downloadUrl(String myurl) throws IOException {
         Log.i("URL",""+myurl);
         myurl = myurl.replace(" ","%20");
