@@ -15,6 +15,7 @@ public class lugar_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_lugar_1);
         setContentView(R.layout.activity_principales_lugares);
             final Button registerLink  = (Button) findViewById(R.id.btnlug);
 

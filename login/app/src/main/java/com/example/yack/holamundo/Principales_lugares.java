@@ -15,12 +15,12 @@ public class Principales_lugares extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ponceca_catalogo);
+        setContentView(R.layout.activity_catalogo_ponceca);
         final ImageButton registerLink  = (ImageButton) findViewById(R.id.imgponceca);
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent =new Intent(Principales_lugares.this, Ponceca_catalogo.class);
+                Intent registerIntent =new Intent(Principales_lugares.this, CatalogoPonceca.class);
                 Principales_lugares.this.startActivity(registerIntent);
             }
         });

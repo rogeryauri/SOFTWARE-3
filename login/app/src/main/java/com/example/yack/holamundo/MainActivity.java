@@ -16,6 +16,7 @@ import com.loopj.android.http.RequestParams;
 public class MainActivity extends AppCompatActivity {
     EditText txtuser,txtpass;
     Button txtboton;
+    Button paginaprincipal;
     String url = "";
     String parametros ="";
     String us,pass;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         txtuser = (EditText)findViewById(R.id.txtuser);
         txtpass = (EditText)findViewById(R.id.txtpass);
         final TextView registerLink  = (TextView) findViewById(R.id.textregistro);
-        final Button paginaprincipal  = (Button) findViewById(R.id.txtboton);
+        paginaprincipal  = (Button)findViewById(R.id.txtboton);
 
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,26 +47,32 @@ public class MainActivity extends AppCompatActivity {
         us=txtuser.getText().toString();
         pass=txtpass.getText().toString();
 
+
         if(us.equals("")||pass.equals("")){
             Toast.makeText(MainActivity.this, "Llenar campo vacio",
                     Toast.LENGTH_LONG).show();
-        }else if(us.equals(txtuser) && pass.equals(txtpass)){
+        }else {
             AsyncHttpClient cliente  =  new  AsyncHttpClient ();
             RequestParams params = new RequestParams();
 
             params.add("txtuser",us);
             params.add("txtpass",pass);
-            cliente.post("http://192.168.25.223:8080/login/consulta.php?",params,new AsyncHttpResponseHandler(){
+            cliente.post("http://192.168.247.1:8080/login/consulta.php",params,new AsyncHttpResponseHandler(){
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     if(statusCode==200){
                         String rs=new String(responseBody);
-                            if(rs.equals("Bienvenido")){
-                            Intent intent=new Intent(MainActivity.this,lugar_1.class);
-                            startActivity(intent);
-                            Toast.makeText(MainActivity.this, "Bienvenido ",Toast.LENGTH_LONG).show();
+                            if(rs.equals("logeado")){
+
+                                    Intent intent=new Intent(MainActivity.this,lugar_1.class);
+                                    startActivity(intent);
+
+                                Toast.makeText(MainActivity.this, "Bienvenido ",Toast.LENGTH_LONG).show();
 
                         }
+                        else{
+                                Toast.makeText(MainActivity.this, "datos incorrectos ",Toast.LENGTH_LONG).show();
+                            }
                     }
                 }
 
@@ -74,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
-        }else{
-            Toast.makeText(MainActivity.this, "Usuario incorrecto",Toast.LENGTH_LONG).show();
         }
  }
 });
