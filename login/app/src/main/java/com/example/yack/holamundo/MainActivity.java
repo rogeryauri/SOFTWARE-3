@@ -57,12 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
             params.add("txtuser",us);
             params.add("txtpass",pass);
-            cliente.post("http://192.168.247.1:8080/login/consulta.php",params,new AsyncHttpResponseHandler(){
+            cliente.post("http://192.168.25.223:8080/login/consulta.php",params,new AsyncHttpResponseHandler(){
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     if(statusCode==200){
                         String rs=new String(responseBody);
                             if(rs.equals("logeado")){
+                                Toast.makeText(MainActivity.this, "Bienvenido0 ",Toast.LENGTH_LONG).show();
 
                                     Intent intent=new Intent(MainActivity.this,lugar_1.class);
                                     startActivity(intent);

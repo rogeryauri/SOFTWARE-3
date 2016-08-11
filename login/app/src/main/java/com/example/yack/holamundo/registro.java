@@ -50,7 +50,7 @@ public class registro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                new CargarDatos().execute("http://10.0.2.2:8080/login/registro.php?nombres="+textnom1.getText().toString()+"&email="+textcorreo.getText().toString()+"&contrasenia="+textpass1.getText().toString()+"&usuario="+textuser.getText().toString()+"&dni="+textdni.getText().toString());
+                new CargarDatos().execute("http://192.168.25.223:8080/login/registro.php?nombres="+textnom1.getText().toString()+"&email="+textcorreo.getText().toString()+"&contrasenia="+textpass1.getText().toString()+"&usuario="+textuser.getText().toString()+"&dni="+textdni.getText().toString());
 
             }
         });
